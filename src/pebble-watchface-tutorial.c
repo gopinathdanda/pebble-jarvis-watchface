@@ -1,25 +1,33 @@
 #include <pebble.h>
+
 static Window *s_main_window;
+
 static TextLayer *s_time_layer;
 static TextLayer *s_date_layer;
 static TextLayer *s_day_layer;
+static TextLayer *s_charged_layer;
+static TextLayer *s_temp_layer;
+
 static GFont s_time_font;
 static GFont s_date_font;
 static GFont s_day_font;
 static GFont s_charged_font;
+
 static BitmapLayer *s_battery_layer;
-static RotBitmapLayer *s_battery_mask_layer;
 static BitmapLayer *s_bottom_layer;
-static RotBitmapLayer *s_seconds_layer;
 static BitmapLayer *s_charging_layer;
-static TextLayer *s_charged_layer;
-static TextLayer *s_temp_layer;
+static RotBitmapLayer *s_battery_mask_layer;
+static RotBitmapLayer *s_seconds_layer;
+
+
 static GBitmap *s_battery_bitmap;
 static GBitmap *s_battery_mask_bitmap;
 static GBitmap *s_bottom_bitmap;
 static GBitmap *s_seconds_bitmap;
 static GBitmap *s_charging_bitmap;
+
 static GPoint center = { 72, 84 };
+
 static int32_t sec_angle;
 static int32_t bat_angle;
 
